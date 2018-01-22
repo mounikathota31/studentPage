@@ -1,0 +1,47 @@
+<div class="list_details">
+  <h2 class="text-center">Students Details</h2>
+    <div class="row">
+      <div class="col">
+          <label for="name">Student Name</label>
+        <input type="text" [(ngModel)]="name" class="form-control"   placeholder="Enter the Name">
+      </div>
+      <div class="col">
+          <label for="year">Year</label>
+        <input type="number" [(ngModel)]="year" class="form-control"  placeholder="year of passout">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+          <label for="email">Email</label>
+        <input type="text" [(ngModel)]="email" class="form-control"  placeholder="Enter the email address">
+      </div>
+      <div class="col">
+          <label for="branch">Branch</label>
+        <input type="text" [(ngModel)]="branch" class="form-control"  placeholder="specify your branch">
+      </div>
+    </div><br>
+    <div>
+        <button type="submit" class="btn btn-primary" (click)="sumbitform()" >Submit</button>
+    </div>
+</div>
+<br>
+<div class="table_block">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Student Name</th>
+                    <th scope="col">Year</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Branch</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let list of lists">
+                    <td>{{list.name}}</td>
+                    <td>{{list.year}}</td>
+                    <td>{{list.email}}</td>
+                    <td>{{list.branch}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
