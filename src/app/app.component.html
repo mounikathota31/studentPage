@@ -1,31 +1,32 @@
+<div class="topnav">
+    <a routerLink="login" class="active" href="#login">Login</a>
+    <a routerLink="list" href="#students">Students</a>
+    
 
+</div>
 <div class="row">
     
     <div class="col-md-4">
     <img class="image_tag" src='{{imagepath}}'/>
     </div>
     <div class="col-md-6">
-      <h1>OSMANIA UNIVERSITY</h1>
+      <h1>OSMANIA UNIVERSITY </h1> 
     </div>
 
-<nav>
-    <div>
-  <a routerLink="/login" class="btn btn-success" >Login</a>
-  <a routerLink="list" class="btn btn-success" > Students </a>
-</div>
-</nav>
+
 </div>
 
 
 
-<div class="click_me_btn">
+<!-- <div class="click_me_btn">
   <button type="button" class="btn btn-info" (click)="toggle()">clickme</button>
 </div>
 <div *ngIf="show" class="text-center" >
   <b>Welcome to the Univercity</b>
-</div>
+</div> -->
 
   
   <router-outlet></router-outlet>
+
   <!-- <app-login></app-login>
     <app-list></app-list> -->

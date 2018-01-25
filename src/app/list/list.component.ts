@@ -11,7 +11,8 @@ export class ListComponent implements OnInit {
   year: string="" ;
   email: string="" ;
   branch: string="" ;
-
+  showBranch:boolean = false;
+  
   lists:Array<object>=[{name: '' , year: '' , email: '' , branch: ''  }];
 
 

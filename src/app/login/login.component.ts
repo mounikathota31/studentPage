@@ -13,12 +13,14 @@ export class LoginComponent{
   password: string="" ;
 
   
-  lists=[{name: '' , password: '' }];
+  lists:Array<object>=[{name: '' , password: '' }];
+  constructor() {}
 
 
   submitclick(){
     
     var data = {name:this.name,password:this.password};
+    this.lists.pop();
     this.lists.push(data);
     this.name='';this.password='';
    
