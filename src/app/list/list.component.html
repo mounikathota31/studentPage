@@ -1,4 +1,5 @@
-<div class="list_details">
+
+<div class="list_details" >
         <h2 class="text-center">Students Details</h2>
         <div class="row">
             <div class="col-5">
@@ -8,65 +9,70 @@
             <div class="col-2">
                 <label for="year">Year</label>
                 <select input type="number" [(ngModel)]="year" class="form-control" placeholder="year">
-                    <option value="2010">2000</option>
-                    <option value="2010">2001</option>
-                    <option value="2010">2002</option>
-                    <option value="2010">2003</option>
-                    <option value="2010">2004</option>
-                    <option value="2010">2005</option>
-                    <option value="2010">2006</option>
-                    <option value="2010">2007</option>
-                    <option value="2010">2008</option>
-                    <option value="2010">2009</option>
-                    <option value="2010">2010</option>
-                    <option value="2010">2011</option>
-                    <option value="2010">2012</option>
-                    <option value="2010">2013</option>
-                    <option value="2010">2014</option>
-                    <option value="2010">2015</option>
-                    <option value="2010">2016</option>
-                </select>
-                
+                        <option value="2010">2000</option>
+                        <option value="2010">2001</option>
+                        <option value="2010">2002</option>
+                        <option value="2010">2003</option>
+                        <option value="2010">2004</option>
+                        <option value="2010">2005</option>
+                        <option value="2010">2006</option>
+                        <option value="2010">2007</option>
+                        <option value="2010">2008</option>
+                        <option value="2010">2009</option>
+                        <option value="2010">2010</option>
+                        <option value="2010">2011</option>
+                        <option value="2010">2012</option>
+                        <option value="2010">2013</option>
+                        <option value="2010">2014</option>
+                        <option value="2010">2015</option>
+                        <option value="2010">2016</option>
+                    </select>
+    
             </div>
-        </div>
-        <div class="row">
-            <div class="col-5">
+    
+            <div class="col-3">
                 <label for="email">Email</label>
                 <input type="text" [(ngModel)]="email" class="form-control" placeholder="Enter the email address">
             </div>
             <div class="col-2">
                 <label for="branch">Branch</label>
                 <select input type="text" [(ngModel)]="branch" class="form-control" placeholder="Select your branch">
-        <option value="ece">CSE</option>
-        <option value="ece">ECE</option>
-        <option value="ece">EEE</option>
-        <option value="ece">CIVIL</option>
-                </select>
-          </div>
-        </div><br>
+            <option value="ece">CSE</option>
+            <option value="ece">ECE</option>
+            <option value="ece">EEE</option>
+            <option value="ece">CIVIL</option>
+                    </select>
+            </div>
+        </div>
+        
+            <div>
+
+                <button type="submit" class="btn btn-primary" (click)="addRow()" >Add Row</button>
+            </div>
+    
         <div>
-            <button type="submit" *ngIf="name!='' && year!='' && email!='' && branch!=''"  class="btn btn-primary" (click)="sumbitform()" >Submit</button>
-           
+            <button type="submit" *ngIf="name!='' && year!='' && email!='' && branch!=''" class="btn btn-primary" (click)="sumbitform()">Submit</button>
+    
         </div>
     </div>
     <br>
     <div class="table_block">
-            <table class="table table-condensed table-bordered">
-                <thead>
-                    <tr>
-                        <th scope="col">Student Name</th>
-                        <th scope="col">Year</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Branch</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let list of lists">
-                        <td>{{list.name}}</td>
-                        <td>{{list.year}}</td>
-                        <td>{{list.email}}</td>
-                        <td>{{list.branch}}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <table class="table table-condensed table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Student Name</th>
+                    <th scope="col">Year</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Branch</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let list of lists">
+                    <td>{{list.name}}</td>
+                    <td>{{list.year}}</td>
+                    <td>{{list.email}}</td>
+                    <td>{{list.branch}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>

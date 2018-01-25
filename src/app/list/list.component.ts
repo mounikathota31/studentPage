@@ -22,11 +22,14 @@ export class ListComponent implements OnInit {
 
   }
     sumbitform(){
+    
      var data = {name:this.name,year:this.year,email:this.email,branch:this.branch};
      this.lists.push(data);
      this.name='';this.year='';this.email='';this.branch='';
    }
-  
+
+   
+
   }
   
 

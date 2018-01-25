@@ -18,9 +18,8 @@ export class LoginComponent{
 
 
   submitclick(){
-    
-    var data = {name:this.name,password:this.password};
     this.lists.pop();
+    var data = {name:this.name,password:this.password};
     this.lists.push(data);
     this.name='';this.password='';
    
