@@ -1,10 +1,7 @@
 .login_block{
-    width: 30%;
+    width: 40%;
     margin: auto;
-}
-
-.table_block{
-    width: 30%;
-    margin: auto;
-    background-color: #f1f1f1;
+    table-layout: initial;
+    font-weight: 700;
+    background-color: #e5cabe;
 }

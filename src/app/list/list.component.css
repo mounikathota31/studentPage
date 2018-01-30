@@ -1,11 +1,8 @@
-
-.list_details{
-    width: 60%;
+.center{
+    width: 50%;
     margin: auto;
+    table-layout: initial;
     font-weight: 700;
-}
-.table_block{
-    width: 60%;
-    margin: auto;
-    background-color: #f1f1f1;
+    background-color: #b5c7d6;
+
 }

@@ -1,5 +1,5 @@
-<div class="login_block">
-
+<table class="login_block" border="2">
+<h2 class="text-center" >Login Details</h2>
     <div class="form-group">
         <label for="exampleInputUsername">UserName</label>
         <input type="text" [(ngModel)]="name" class="form-control" id="exampleInputUsername" aria-describedby="emailHelp" placeholder="Enter the Username">
@@ -14,10 +14,9 @@
         <label class="form-check-label" for="exampleCheck1">Check me out</label>
     </div>
     <button type="submit" *ngIf="name!='' && password!=''" class="btn btn-primary" (click)="submitclick()">Submit</button>
-</div>
-<br>
 
-<div class="table_block">
+
+
     <table class="table table-condensed table-bordered">
         <thead>
             <tr>
@@ -34,5 +33,4 @@
             </tr>
         </tbody>
     </table>
-
-</div>
+</table>

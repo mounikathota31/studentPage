@@ -7,29 +7,43 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  name: string="" ;
-  year: string="" ;
-  email: string="" ;
-  branch: string="" ;
-  showBranch:boolean = false;
-  
-  lists:Array<object>=[{name: '' , year: '' , email: '' , branch: ''  }];
+  // name: string;
+  // year: string;
+  // email: string;
+  // branch: string;
+  showBranch: boolean = false;
 
+  lists: Array < object >= [];
+  listing: Array < object >= [{
+    name: '',
+    year: '',
+    email: '',
+    branch: ''
+}];
 
   constructor() {}
 
-  ngOnInit(){
+  ngOnInit() {
 
   }
-    sumbitform(){
-    
-     var data = {name:this.name,year:this.year,email:this.email,branch:this.branch};
-     this.lists.push(data);
-     this.name='';this.year='';this.email='';this.branch='';
-   }
-
-   
-
+  sumbitform() {
+      this.lists = [];
+      for(var i=0;i<this.listing.length;i++){
+        var student = this.listing[i];
+        this.lists.push(student);
+      }
   }
+  addRow() {
+      this.listing.push({
+          name: '',
+          year: '',
+          email: '',
+          branch: ''
+      });
+  }
+
+
+
+}
   
 
